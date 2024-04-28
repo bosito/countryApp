@@ -1,0 +1,40 @@
+<div *ngIf="counties.length === 0; else table" class="alert alert-warning text-center">
+  not current search
+</div>
+
+<ng-template #table >
+  <table class="" >
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Flag</th>
+        <th>Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of counties; let index = index" >
+        <td>
+          {{ index + 1 }}
+        </td>
+        <td>
+          {{ country.flag }}
+        </td>
+        <td>
+          {{ country.name.official }}
+        </td>
+        <td>
+          {{ country.capital }}
+        </td>
+        <td>
+          {{ country.population | number }}
+        </td>
+        <th>
+          see more
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
