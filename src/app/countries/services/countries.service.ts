@@ -16,8 +16,7 @@ export class CountriesService {
       catchError((error) => {
         console.error(error);
         return of([]);
-      }),
-      delay(2000)
+      })
     );
   }
 

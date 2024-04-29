@@ -1,1 +1,3 @@
-<input #txtSearch type="text" [placeholder]="placeholder" (keyup.enter)="emitValue()" class="form-control" >
+<!-- (keyup.enter)="emitValue()" -->
+
+<input #txtSearch type="text" [placeholder]="placeholder" (keyup)="onKeysPress()" class="form-control" >
