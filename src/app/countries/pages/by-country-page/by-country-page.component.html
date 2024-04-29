@@ -4,7 +4,7 @@
 <div class="row" >
   <div class="col" >
     <!-- search -->
-    <app-search-box placeholder="Search by country" (onValue)="searchByCapital($event)" ></app-search-box>
+    <app-search-box #searchBox [searchValue]="valueSearch" placeholder="Search by country" (onValue)="searchByCapital($event)" ></app-search-box>
   </div>
 </div>
 
