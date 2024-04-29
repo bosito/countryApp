@@ -31,9 +31,9 @@
         <td>
           {{ country.population | number }}
         </td>
-        <th>
-          see more
-        </th>
+        <td>
+          <a [routerLink]="['/countries/by', country.cca3]">see more</a>
+        </td>
       </tr>
     </tbody>
   </table>
