@@ -32,7 +32,7 @@ export class CountryPageComponent implements OnInit {
       .subscribe({
         next: (country: ICountry | null) => {
           if (!country) {
-            // this.router.navigate(['']);
+            this.router.navigate(['']);
             return;
           }
 

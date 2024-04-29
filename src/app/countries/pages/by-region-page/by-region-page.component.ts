@@ -10,6 +10,7 @@ import { take } from 'rxjs';
 })
 export class ByRegionPageComponent {
   public countries: ICountry[] = [];
+  public isLoading = true;
   constructor(private countriesService: CountriesService) {}
 
   public searchByCapital(term: string) {
@@ -18,6 +19,7 @@ export class ByRegionPageComponent {
       .pipe(take(1))
       .subscribe({
         next: (value: ICountry[]) => {
+          this.isLoading = false;
           this.countries = value;
         },
       });
